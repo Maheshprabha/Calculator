@@ -38,9 +38,7 @@ public class MenuDriven {
 			System.out.println("Do you want to continue?1.Yes 2.No");
 			ex=scan.nextInt();
 		}while(ex==1);
-		}
-	
-
+ }
 }
 
 

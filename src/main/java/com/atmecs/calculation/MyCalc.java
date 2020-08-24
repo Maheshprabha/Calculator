@@ -5,9 +5,6 @@ public class MyCalc extends Addition {
 	
 	Addition add = new Addition();
 	Substract sub = new Substract();
-	//Calculator cal = new Calculator(input1, input1);
-    //cal.Add();
-	
 	//Multiplication mul = new Multiplication();
 	Division div = new Division();
 	add.additionCalculation();
