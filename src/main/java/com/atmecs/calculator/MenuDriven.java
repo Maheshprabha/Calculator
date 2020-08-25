@@ -12,20 +12,24 @@ public class MenuDriven {
 			System.out.println("1.Addition 2.Subtraction 3.Multiplication 4.Division 5.Exit");
 			option = scan.nextInt();
 			if(option!=5){
-				System.out.println("Enter the first number");
-				num1=scan.nextInt();
-				System.out.println("Enter the second number");
-				num2=scan.nextInt();
+				//System.out.println("Enter the first number");
+				//num1=scan.nextInt();
+				//System.out.println("Enter the second number");
+				//num2=scan.nextInt();
 			}
 			else
 				break;
 			switch(option)
 			{
-				case 1:System.out.println("Addition of "+num1+" and "+num2+" is "+(num1+num2));
+			
+				case 1: NumberOperation add = new NumberOperation();
+				        add.multilpleOperations();
 					break;
-				case 2:System.out.println("Subtraction of "+num1+" and "+num2+" is "+(num1-num2));
+				case 2: Subtraction sub = new Subtraction();
+				        sub.subtractionMultiple();
 					break;
-				case 3:System.out.println("multiplication of "+num1+" and "+num2+" is "+(num1*num2));
+				case 3: Multiplication mul = new Multiplication();
+				        mul.multilpleOperations();
 					break;
 				case 4:	if(num2==0)
 						System.out.println("Error!!! In Division denominator cannot be 0!");
