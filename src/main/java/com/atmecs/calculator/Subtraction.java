@@ -20,8 +20,7 @@ public class Subtraction {
             a=scan.nextInt();
         	sum=a-sum;
         	i++;
-            System.out.println("subtract of all number is " +sum);
-	
+        	System.out.println("subtract of all number is " +sum);
         }while(loop);
 	}
 }

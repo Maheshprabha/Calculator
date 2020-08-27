@@ -2,28 +2,30 @@ package com.atmecs.calculator;
 
 import java.util.Scanner;
 
-public class Multiplication {
+@SuppressWarnings("serial")
+public class Multiplication extends Exception {
 
+	@SuppressWarnings("unused")
 	public void multilpleOperations() {
-		int i, n;
+		int i, n, sum;
 		@SuppressWarnings("resource")
 		Scanner scan = new Scanner(System.in);
 		System.out.print("How many elements you want to multiply : ");
-		n = scan.nextInt();
+		int size = scan.nextInt();
+		try {
 
-		int a[] = new int[n];
-		for (i = 0; i < n; i++) {
-			System.out.print("Enter " + (i + 1) + " Element : ");
-			a[i] = scan.nextInt();
-		}
-        for (i = 1; i < n; i++) {
-			int j = 0, sum = 0;
-			while (j < a[i]) {
-				sum += a[i - 1];
-				j++;
+			int myArray[] = new int[size];
+			int product = 1;
+			System.out.println("Enter the elements ");
+			for (int i = 0; i < size; i++) {
+				myArray[i] = scan.nextInt();
+				product = product * myArray[i];
 			}
-			a[i] = sum;
+			System.out.println("Sum of the elements of the array ::" + product);
+
+		} catch (Exception ex) {
+			
+
 		}
-		System.out.println("\nMultiplication of " + n + " Numbers :" + a[n - 1] + " \n");
 	}
 }

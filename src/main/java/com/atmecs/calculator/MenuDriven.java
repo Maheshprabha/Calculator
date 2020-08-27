@@ -2,10 +2,12 @@ package com.atmecs.calculator;
 
 import java.util.Scanner;
 
-public class MenuDriven {
+@SuppressWarnings("serial")
+public class MenuDriven extends Exception { 
 	public void calculator() {
-		int num1=0, num2=0,option,ex;
+		int num1=0, num2=0,option,ex = 0;
 		do {
+			try {
 			@SuppressWarnings("resource")
 			Scanner scan = new Scanner(System.in);
 			System.out.println("enter the choice");
@@ -21,10 +23,11 @@ public class MenuDriven {
 				break;
 			switch(option)
 			{
-			
+			    
 				case 1: NumberOperation add = new NumberOperation();
-				        add.multilpleOperations();
-					break;
+		
+					add.multilpleOperations();
+                    break;
 				case 2: Subtraction sub = new Subtraction();
 				        sub.subtractionMultiple();
 					break;
@@ -41,8 +44,13 @@ public class MenuDriven {
 			}
 			System.out.println("Do you want to continue?1.Yes 2.No");
 			ex=scan.nextInt();
-		}while(ex==1);
+
+			}catch (Exception e) {
+				System.out.println("wrong input...Try again");
+			}
+			}while(ex==1);
  }
+
 }
 
 
